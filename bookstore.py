@@ -133,6 +133,9 @@ class BookStore:
             if not book.read:
                 is_read = 'not'
 
+            read_message = f'You have {is_read} read {book.title} by {book.author}'
+            ui.message(read_message)
+
             
         def _delete_book(self, book):
             """ Removes book from store. Raises BookError if book not in store. 

@@ -129,6 +129,10 @@ class BookStore:
             if rows_modfied == 0:
                 raise BookError(f'Book with id {book.id} not found')
 
+            is is_read = ''
+            if not book.read:
+                is_read = 'not'
+
             
         def _delete_book(self, book):
             """ Removes book from store. Raises BookError if book not in store. 

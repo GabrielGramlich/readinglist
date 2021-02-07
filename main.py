@@ -67,9 +67,9 @@ def change_read():
 
     is_read = ''
     if not book.read:
-        is_read = 'not'
+        is_read = ' not'
 
-    ui.message(f'You have {is_read} read {book.title} by {book.author}')
+    ui.message(f'You have{is_read} read {book.title} by {book.author}')
     
 
 def quit_program():

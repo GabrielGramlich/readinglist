@@ -43,8 +43,8 @@ def delete_book():
         book = store.get_book_by_id(book_id)  
         store.delete(book)
     except ValueError:
-        print('Error: Book Not Found')
-
+        if store.get_book_by_id() == None:
+            raise print('Book does not have ID')
 
 def show_read_books():
     read_books = store.get_books_by_read_value(True)

@@ -65,9 +65,9 @@ def change_read():
         new_read = ui.get_read_value()     
         book.read = new_read 
         book.save()
+        ui.display_book_change_message(book)    
     else:
         ui.message('Book does not exist, please select \'Add book\' instead.')
-    
 
 def quit_program():
     ui.message('Thanks and bye!')

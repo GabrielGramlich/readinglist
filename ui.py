@@ -14,6 +14,14 @@ def display_menu_get_choice(menu):
             print('Not a valid choice, try again.')
 
 
+def display_book_change_message(book):
+    is_read = ''
+    if not book.read:
+        is_read = ' not'
+
+    message(f'You have{is_read} read {book.title} by {book.author}')
+
+
 def message(msg):
     """ Prints a message for the user
      :param msg: the message to print"""
